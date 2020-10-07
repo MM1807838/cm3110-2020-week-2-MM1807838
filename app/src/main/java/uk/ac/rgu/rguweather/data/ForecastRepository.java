@@ -75,7 +75,7 @@ public class ForecastRepository {
         // this is not particularly good coding style.
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         long time = System.currentTimeMillis();
-        time += daysInTheFuture * (1000 * 60 * 24);
+        time += daysInTheFuture * (1000 * 60 * 60 * 24);
 
         forecast.setDate(sdf.format(new Date(time)));
 

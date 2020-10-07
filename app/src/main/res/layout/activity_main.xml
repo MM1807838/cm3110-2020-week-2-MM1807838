@@ -10,10 +10,11 @@
         android:id="@+id/tv_enter_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:text="@string/tv_enter_location"
         app:layout_constraintBottom_toBottomOf="@+id/et_location"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/et_location" />
 
     <EditText
@@ -23,11 +24,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/tv_hint_enter_location_name_here"
         android:inputType="textPersonName"
-        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_enter_location"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Enter Location Name" />
 
     <Button
         android:id="@+id/btn_get_forecast"
@@ -38,5 +44,165 @@
         app:layout_constraintEnd_toEndOf="@+id/et_location"
         app:layout_constraintStart_toStartOf="@+id/et_location"
         app:layout_constraintTop_toBottomOf="@+id/et_location" />
+
+    <Spinner
+        android:id="@+id/sp_days_ahead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:entries="@array/days_ahead_array"
+        app:layout_constraintBottom_toTopOf="@+id/tv_location_forecast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_forecast"
+        app:layout_constraintVertical_bias="0.409" />
+
+    <TextView
+        android:id="@+id/tv_location_forecast"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="@string/tv_location_forecast_1" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location_forecast"
+        app:layout_constraintVertical_bias="0.005">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_for_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_for_dates" />
+
+            <TextView
+                android:id="@+id/tv_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                tools:text="@string/str_dates" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_max_temp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_max_temp" />
+
+            <TextView
+                android:id="@+id/tv_max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_min_temp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_min_temp" />
+
+            <TextView
+                android:id="@+id/tv_min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_and_it_will_be"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_and_it_will_be" />
+
+            <TextView
+                android:id="@+id/tv_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+        </TableRow>
+    </TableLayout>
+
+    <CheckBox
+        android:id="@+id/cb_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:text="@string/cb_favourite"
+        app:layout_constraintEnd_toStartOf="@+id/btn_get_forecast"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_location" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/tv_days_ahead"
+        app:layout_constraintBottom_toTopOf="@+id/tv_location_forecast"
+        app:layout_constraintEnd_toStartOf="@+id/sp_days_ahead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_favourite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

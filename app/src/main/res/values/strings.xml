@@ -3,10 +3,40 @@
 
     <string name="tv_enter_location">Enter a location:</string>
     <string name="btn_get_forecast">Get forecast</string>
+    <string name="tv_location_forecast_1">No Location Selected</string>
+    <string name="tv_location_forecast_2">" Forecast"</string>
+    <string name="tv_temp_units">°C</string>
+
+    <string-array name="days_ahead_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
 
     <!-- for the RandomWeatherForecastGetter -->
     <string name="weather_sun">sunny</string>
     <string name="weather_rain">rain</string>
     <string name="weather_snow">snow</string>
     <string name="weather_windy">windy</string>
+    <string name="str_location_forecast"><![CDATA[<Location> Forecast]]></string>
+    <string name="str_dates"><![CDATA[<dates>]]></string>
+    <string name="tv_max_temp">Max Temp</string>
+    <string name="tv_min_temp">Min Temp</string>
+    <string name="tv_and_it_will_be">And it will be</string>
+    <string name="cb_favourite">Favourite</string>
+    <string name="tv_for_dates">For</string>
+    <string name="tv_hint_enter_location_name_here">Enter Location name here</string>
+    <string name="tv_days_ahead">How many days ahead?</string>
 </resources>
